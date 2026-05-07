@@ -1,5 +1,6 @@
 import React from "react";
 import heroimage from '../assets/heroimage.jpg'
+
 const About = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
