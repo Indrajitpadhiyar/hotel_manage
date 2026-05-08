@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { roomData, roomCommonData } from '../assets/roomData'
+import { roomData, roomCommonData } from '../data/roomData'
 import location from '../assets/location.webp'
 import StarRating from '../components/StarRating'
 import Title from '../components/Title'

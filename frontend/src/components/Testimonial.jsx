@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './Title'
-import testimonials from '../assets/testimonials'
+import testimonials from '../data/testimonials'
 import StarRating from './StarRating'
 
 const Testimonial = () => {

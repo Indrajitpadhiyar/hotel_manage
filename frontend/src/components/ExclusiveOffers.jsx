@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './Title'
-import { exclusivedoffer } from '../assets/exclusivedoffer'
+import { exclusivedoffer } from '../data/exclusivedoffer'
 import arrow from '../assets/arrow.png'
 
 const ExclusiveOffers = () => {

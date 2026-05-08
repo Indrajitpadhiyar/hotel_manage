@@ -1,5 +1,5 @@
 import React from 'react'
-import testimonials from '../assets/testimonials'
+import testimonials from '../data/testimonials'
 
 const StarRating = ({ rating = 4 }) => {
     return (
