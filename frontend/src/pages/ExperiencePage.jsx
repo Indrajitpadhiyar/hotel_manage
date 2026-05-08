@@ -20,59 +20,60 @@ const experiences = [
 
 const ExperiencePage = () => {
   return (
-    <div className="bg-gray-50">
+    <div className="bg-[color:var(--color-paper)]">
       {/* Hero Section */}
       <div
-        className="h-[60vh] bg-cover bg-center flex items-center justify-center"
+        className="relative flex h-[60vh] items-center justify-center bg-cover bg-center"
         style={{
           backgroundImage:
             "url('https://source.unsplash.com/1600x900/?luxury-hotel')",
         }}
       >
-        <h1 className="text-4xl md:text-6xl text-white font-bold bg-black/50 px-6 py-3 rounded-xl">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/35 to-transparent" />
+        <h1 className="relative rounded-2xl border border-white/10 bg-white/5 px-6 py-3 font-playfair text-4xl font-semibold text-white backdrop-blur md:text-6xl">
           Our Experiences
         </h1>
       </div>
 
       {/* Intro */}
-      <div className="text-center py-12 px-6 max-w-3xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-4">
+      <div className="mx-auto max-w-3xl px-6 py-12 text-center">
+        <h2 className="mb-4 font-playfair text-3xl font-semibold">
           Discover Unforgettable Moments
         </h2>
-        <p className="text-gray-600">
+        <p className="text-slate-700">
           We provide a blend of luxury, comfort, and memorable experiences to
           make your stay exceptional.
         </p>
       </div>
 
       {/* Experience Cards */}
-      <div className="grid md:grid-cols-3 gap-8 px-6 pb-16">
+      <div className="grid gap-8 px-6 pb-16 md:grid-cols-3">
         {experiences.map((item, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition duration-300"
+            className="group overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-[var(--shadow-soft)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)]"
           >
             <img
               src={item.img}
               alt={item.title}
-              className="h-56 w-full object-cover"
+              className="h-56 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
             />
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="mb-2 font-playfair text-xl font-semibold text-slate-900">
                 {item.title}
               </h3>
-              <p className="text-gray-600">{item.desc}</p>
+              <p className="text-slate-700">{item.desc}</p>
             </div>
           </div>
         ))}
       </div>
 
       {/* CTA */}
-      <div className="bg-black text-white text-center py-12">
-        <h2 className="text-3xl font-semibold mb-4">
+      <div className="bg-[radial-gradient(circle_at_top,rgba(200,162,75,0.25),transparent_55%),linear-gradient(135deg,#05070c,#0b1220)] text-center text-white py-12">
+        <h2 className="mb-4 font-playfair text-3xl font-semibold">
           Ready to Book Your Stay?
         </h2>
-        <button className="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 transition">
+        <button className="lux-button-primary px-6 py-3">
           Book Now
         </button>
       </div>

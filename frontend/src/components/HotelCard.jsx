@@ -6,33 +6,37 @@ import { Link } from "react-router-dom"
 const HotelCard = ({ room, index }) => {
   return (
 
-    <div className="max-w-sm w-full bg-white rounded-xl overflow-hidden shadow-md">
+    <div className="group max-w-sm w-full overflow-hidden rounded-2xl border border-black/10 bg-white/70 shadow-[var(--shadow-soft)] backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
 
       <div className="relative">
         <img
           src={room.image[0]}
           alt=""
-          className="w-full h-48 object-cover"
+          className="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
         />
 
         {index % 2 === 0 && (
-          <p className="absolute top-3 left-3 bg-white px-3 py-1 text-xs rounded-full">
+          <p className="absolute left-3 top-3 rounded-full bg-white/85 px-3 py-1 text-xs font-semibold tracking-wide text-slate-900 ring-1 ring-black/10 backdrop-blur">
             Best Seller
           </p>
         )}
       </div>
 
-      <div className="p-4">
+      <div className="p-5">
         <div className="flex justify-between">
-          <p className="text-lg font-semibold">{room.name}</p>
-          <span>⭐ 4.5</span>
+          <p className="text-lg font-semibold text-slate-900">{room.name}</p>
+          <span className="text-sm font-semibold text-slate-800">⭐ 4.5</span>
         </div>
 
-        <p className="text-sm text-gray-500">{room.Hotel.address}</p>
+        <p className="mt-1 text-sm text-slate-600">{room?.Hotel?.address}</p>
 
         <div className="flex justify-between mt-3">
-          <p className="font-bold">${room.pricePerNight}/night</p>
-          <button className="border px-3 py-1 rounded hover:bg-gray-100">
+          <p className="font-semibold text-slate-900">
+            <span className="text-sm text-slate-600">$</span>
+            {room.pricePerNight}
+            <span className="text-sm font-medium text-slate-600">/night</span>
+          </p>
+          <button className="rounded-full border border-black/15 bg-white/50 px-4 py-1.5 text-sm font-semibold text-slate-900 transition hover:bg-white/70">
             Book Now
           </button>
         </div>

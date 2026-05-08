@@ -1,6 +1,7 @@
 import React from "react";
 import search from "../assets/search.webp"
 import calender from "../assets/calender.webp"
+import heroImage from "../assets/heroimage.jpg";
 
 const Hero = () => {
 
@@ -14,7 +15,10 @@ const Hero = () => {
     ];
     return (
         <section className="relative min-h-screen overflow-hidden text-white">
-            <div className="absolute inset-0 bg-[url('src/assets/heroimage.jpg')] bg-cover bg-center brightness-90" />
+            <div
+                className="absolute inset-0 bg-cover bg-center brightness-90"
+                style={{ backgroundImage: `url(${heroImage})` }}
+            />
             <div className="absolute inset-0 bg-gradient-to-br from-slate-950/85 via-slate-950/40 to-cyan-950/55" />
 
             <div className="relative z-10 flex min-h-screen items-center px-6 py-12 md:px-16 lg:px-32">

@@ -85,9 +85,11 @@ const AllRooms = () => {
         ))}
 
       </div>
-      <div className='BG-WHITE W-80 BORDER BORDER-GRAY-300 TEXT-GRAY-600 MAX-LG:MB-8 MIN-LG:MT-16'>
+      <aside className='mb-8 w-full max-w-md rounded-2xl border border-black/10 bg-white/70 p-5 text-slate-700 shadow-[var(--shadow-soft)] backdrop-blur lg:mb-0 lg:mt-16 lg:w-80'>
+        <p className="font-playfair text-xl text-slate-900">Filters</p>
+        <p className="mt-1 text-sm text-slate-600">Coming soon.</p>
 
-      </div>
+      </aside>
     </div>
   );
 };

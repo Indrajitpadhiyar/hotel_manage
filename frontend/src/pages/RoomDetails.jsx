@@ -23,7 +23,7 @@ const RoomDetails = () => {
   if (!room) return <p className="py-28 text-center">Room not found</p>
 
   return (
-    <div className='py-28 md:py-35 px-4 md:px-16 lg:px-24 xl:px-32'>
+    <div className='px-4 py-28 md:px-16 md:py-32 lg:px-24 xl:px-32'>
 
       {/* Header */}
       <div className='flex flex-col md:flex-row items-start md:items-center gap-2'>
@@ -31,7 +31,7 @@ const RoomDetails = () => {
           {room.name} <span>({room.roomType || "Room"})</span>
         </h1>
 
-        <p className='text-xs font-inter py-1 px-3 text-white bg-orange-500 rounded-full'>
+        <p className='rounded-full bg-[color:var(--color-primary)] px-3 py-1 text-xs font-semibold text-slate-950'>
           20% OFF
         </p>
       </div>
@@ -139,10 +139,10 @@ const RoomDetails = () => {
       </form>
       <div></div>
 
-      <div className='mt-25 space-y-4'>
+      <div className='mt-20 space-y-4'>
         {roomCommonData.map((spec, index) => (
           <div className='flex items-start gap-2' key={index}>
-            <img src={arrow} alt='' className='w-6.5' />
+            <img src={arrow} alt='' className='w-6' />
             <div>
               <p className='text-base'>{spec.Title}</p>
               <p className='text-gray-500'>{spec.description}</p>
@@ -150,7 +150,7 @@ const RoomDetails = () => {
           </div>
         ))}
       </div>
-      <div className='max-w-3xl border-y border-gray-300 my-15 py-10 text-gray-500'>
+      <div className='my-12 max-w-3xl border-y border-black/10 py-10 text-slate-600'>
         <p>Guests will be allocated on the ground floor according to availability.
           You get a comfortable Two bedroom apartment has a true city feeling.
           The price quoted is for two guest, at the guest slot please mark the number of guests to get the exact price for groups.
@@ -170,8 +170,8 @@ const RoomDetails = () => {
             </div>
           </div>
         </div>
-      <button className='px-6 py-5 mt-4 rounded text-white n-primary hover:bg-primary-dull transition-all cursor-pointer'>
-        contant Now
+      <button className='lux-button-primary mt-4 px-6 py-3'>
+        Contact Now
       </button>
       </div> 
     </div>

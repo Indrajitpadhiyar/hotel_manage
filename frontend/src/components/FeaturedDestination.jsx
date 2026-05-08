@@ -9,7 +9,9 @@ const FeaturedDestination = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='flex flex-col items-center px-6 md:px-24 bg-slate-50 py-20'>
+    <section className='relative overflow-hidden py-20'>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(200,162,75,0.18),transparent_60%),radial-gradient(circle_at_bottom,rgba(15,118,110,0.12),transparent_55%)]" />
+      <div className='relative flex flex-col items-center px-6 md:px-24'>
 
       <Title title="Featured Destinations" subTitle="Discover our handpicked selection of exceptional
       propertics around the world, affering unparalleled luxury and unforgettable experiences." />
@@ -23,9 +25,9 @@ const FeaturedDestination = () => {
         navigate('/destinations');
         scrollTo(0, 0);
       }}
-        className='my-10 px-4 py-2 text-sm font-medium border border-gray-300 rounded bg-white
-        hover:bg-gray-50 transition-all cursor-pointer'>View All Destinations</button>
-    </div>
+        className='lux-button-ghost my-10 cursor-pointer'>View All Destinations</button>
+      </div>
+    </section>
   )
 }
 

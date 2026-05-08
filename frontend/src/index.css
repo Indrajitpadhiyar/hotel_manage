@@ -3,8 +3,20 @@
 
 @import "tailwindcss";
 @theme {
-  --color-primary: #3563EB;
-  --color-secondary: #FBBF24;
+  /* Luxury theme tokens (Tailwind v4 CSS variables) */
+  --color-primary: #C8A24B; /* warm gold */
+  --color-secondary: #0F766E; /* deep teal accent */
+
+  --color-bg: #0B0D11; /* near-black */
+  --color-surface: #111827; /* slate-ish */
+  --color-paper: #FAF7F0; /* ivory */
+
+  --color-text: #0F172A; /* slate-900 */
+  --color-muted: #475569; /* slate-600 */
+  --color-border: rgba(15, 23, 42, 0.12);
+
+  --shadow-soft: 0 18px 55px -30px rgba(2, 6, 23, 0.45);
+  --shadow-card: 0 28px 90px -55px rgba(2, 6, 23, 0.65);
 }
 *{
   font-family: outfit;
@@ -12,4 +24,60 @@
 .font-playfair{
   font-family: playfair !important;
 
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-text);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-primary) 30%, white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@layer components {
+  .lux-container {
+    @apply mx-auto w-full max-w-7xl px-6 md:px-16 lg:px-24 xl:px-32;
+  }
+
+  .lux-card {
+    @apply rounded-2xl border border-black/10 bg-white/70 backdrop-blur;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .lux-button {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold transition;
+  }
+
+  .lux-button-primary {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold transition text-black;
+    background: linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--color-primary) 92%, white),
+      color-mix(in oklab, var(--color-primary) 72%, black)
+    );
+  }
+
+  .lux-button-primary:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+  }
+
+  .lux-button-ghost {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold transition border border-black/15 bg-white/40 text-slate-900 hover:bg-white/60;
+  }
 }
