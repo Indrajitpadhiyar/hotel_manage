@@ -15,8 +15,6 @@ const StarRating = ({ rating = 4 }) => {
                     alt="star"
                     className='w-4.5 h-4.5' />
             ))}
-
-
         </div>
     )
 }
