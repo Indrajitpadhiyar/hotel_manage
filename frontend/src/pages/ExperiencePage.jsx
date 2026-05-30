@@ -12,6 +12,11 @@ const experiences = [
     img: "https://source.unsplash.com/600x400/?hotel-room",
   },
   {
+    title: "Spa & Wellness",
+    desc: "Relax your body and mind with our premium spa services.",
+    img: "https://source.unsplash.com/600x400/?spa",
+  },
+  {
     title: "Fine Dining",
     desc: "Enjoy world-class cuisine prepared by top chefs.",
     img: "https://source.unsplash.com/600x400/?restaurant-food",
