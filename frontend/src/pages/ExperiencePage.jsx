@@ -6,6 +6,11 @@ const experiences = [
     desc: "Experience ultimate comfort with our well-designed luxury rooms.",
     img: "https://source.unsplash.com/600x400/?hotel-room",
   },
+   {
+    title: "Luxury hotel",
+    desc: "Experience ultimate comfort with our well-designed luxury rooms.",
+    img: "https://source.unsplash.com/600x400/?hotel-room",
+  },
   {
     title: "Fine Dining",
     desc: "Enjoy world-class cuisine prepared by top chefs.",
